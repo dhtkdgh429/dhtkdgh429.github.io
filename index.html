@@ -31,14 +31,9 @@ hello, world!!!<br><br>
         dictObject['imgDesc'] = imgDesc;
         dictObject['imgUrl'] = imgUrl;
         
-//        document.getElementById('call_save_id').onclick = function callSaveImage(dictObject) {
-//            window.webkit.messageHandlers.saveImageHandler.postMessage(dictObject);
-//            window.location = 'callSaveImage:dictObject:' + dictObject;
-//            alert(dictObject.imgName.value);
-//        });
         function callSaveImage() {
 //            window.webkit.messageHandlers.saveImageHandler.postMessage(dictObject);
-            window.location = 'callSaveImage:dictObject:' + dictObject;
+            window.location = "callSaveImage://TestTest";
             alert(dictObject['imgName'].value + dictObject['imgDesc'].value);
         }
         
