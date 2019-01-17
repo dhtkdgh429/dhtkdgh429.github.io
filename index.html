@@ -18,7 +18,7 @@ hello, world!!!<br><br>
         설명 : <input id="img_desc_id" type="text" name="img_desc" size="40"><br><br>
         이미지 URL : <input id="img_url_id" type="text" name="img_url" size="40"><br><br>
         
-        <button onclick="callSaveImage" id="call_save_id" type="button" style="height: 15pt; width: 40pt"> 저장 </button>
+        <button onclick="callSaveImage()" id="call_save_id" type="button" style="height: 15pt; width: 40pt"> 저장 </button>
         <button id="call_list_id" type="button" style="height: 15pt; width: 40pt"> 목록 </button>
     </form>
     <script type="text/javascript" charset="UTF-8">
@@ -31,11 +31,15 @@ hello, world!!!<br><br>
         dictObject['imgDesc'] = imgDesc;
         dictObject['imgUrl'] = imgUrl;
         
-        document.getElementById('call_save_id').onclick = function callSaveImage(dictObject) {
-            window.webkit.messageHandlers.saveImageHandler.postMessage(dictObject);
-            window.location = 'callSaveImage:dictObject:' + dictObject;
-            alert(dictObject.imgName.value);
-        });
+//        document.getElementById('call_save_id').onclick = function callSaveImage(dictObject) {
+//            window.webkit.messageHandlers.saveImageHandler.postMessage(dictObject);
+//            window.location = 'callSaveImage:dictObject:' + dictObject;
+//            alert(dictObject.imgName.value);
+//        });
+        function callSaveImage() {
+            alert("callSaveImage");
+        }
+        
         
         function redHeader() {
             alert('readHeader() CALL');
