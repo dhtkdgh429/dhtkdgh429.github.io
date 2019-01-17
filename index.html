@@ -26,14 +26,14 @@ hello, world!!!<br><br>
         var desc = &("img_desc_id".val())
         var url = &("img_url_id".val())
         
-        var arrImg = new Array;
-        arrImg[0] = name;
-        arrImg[1] = desc;
-        arrImg[2] = url;
+        var dictObject = {};
+        dictObject['name'] = name;
+        dictObject['desc'] = desc;
+        dictObject['url'] = url;
         
         $("#call_save_id").click(function callSaveImage() {
             //alert($("#img_name_id").val());
-            window.webkit.messageHandlers.callSaveImage.postMessage(arrImg);
+            window.webkit.messageHandlers.callSaveImage.postMessage(dictObject);
         });
         
         function redHeader() {
