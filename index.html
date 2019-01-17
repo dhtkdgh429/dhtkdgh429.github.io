@@ -22,9 +22,9 @@ hello, world!!!<br><br>
         <button id="call_list_id" type="button" style="height: 15pt; width: 40pt"> 목록 </button>
     </form>
     <script type="text/javascript" charset="UTF-8">
-        var imgName = &('img_name_id'.val());
-        var imgDesc = &("img_desc_id".val());
-        var imgUrl = &("img_url_id".val());
+        var imgName = document.getElementById('img_name_id').value;
+        var imgDesc = document.getElementById('img_desc_id').value;
+        var imgUrl = document.getElementById('img_url_id').value;
         
         var dictObject = {};
         dictObject['imgName'] = imgName;
