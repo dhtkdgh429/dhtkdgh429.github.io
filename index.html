@@ -33,7 +33,7 @@ hello, world!!!<br><br>
         
         function callSaveImage() {
 //            window.webkit.messageHandlers.saveImageHandler.postMessage(dictObject);
-            window.location = "giosis://callSaveImage:" + dictObject;
+            window.location = "giosis://callSaveImage::imgName=" + dictObject.imgName.value + "::imgDesc=" + dictObject.imgDesc.value + "::imgUrl=" + dictObject.imgUrl.value;
             alert(dictObject['imgName'].value + dictObject['imgDesc'].value);
         }
         
