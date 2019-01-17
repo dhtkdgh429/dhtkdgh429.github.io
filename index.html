@@ -25,10 +25,15 @@ hello, world!!!<br><br>
         var name = &('img_name_id'.val())
         var desc = &("img_desc_id".val())
         var url = &("img_url_id".val())
+        
+        var arrImg = new Array;
+        arrImg[0] = name;
+        arrImg[1] = desc;
+        arrImg[2] = url;
+        
         $("#call_save_id").click(function callSaveImage() {
             //alert($("#img_name_id").val());
-            //window.webkit.messageHandlers.callSaveImage.postMessage(name, desc, url);
-            window.webkit.messageHandlers.callSaveImage.postMessage("name, desc, url");
+            window.webkit.messageHandlers.callSaveImage.postMessage(arrImg);
         });
         
         function redHeader() {
