@@ -32,8 +32,8 @@ hello, world!!!<br><br>
         dictObject['url'] = url;
         
         $("#call_save_id").click(function callSaveImage(dictObject) {
-            //alert($("#img_name_id").val());
             window.webkit.messageHandlers.saveImageHandler.postMessage(dictObject);
+            alert(name);
         });
         
         function redHeader() {
