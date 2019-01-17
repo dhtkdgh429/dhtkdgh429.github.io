@@ -27,7 +27,7 @@ hello, world!!!<br><br>
         var url = &("img_url_id".val())
         $("#call_save_id").click(function callSaveImage() {
             //alert($("#img_name_id").val());
-            webkit.messageHandlers.callbackHandler.postMessage(name, desc, url);
+            webkit.messageHandlers.callSaveImage.postMessage(name, desc, url);
         });
         
         function redHeader() {
