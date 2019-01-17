@@ -22,14 +22,14 @@ hello, world!!!<br><br>
         <button id="call_list_id" type="button" style="height: 15pt; width: 40pt"> 목록 </button>
     </form>
     <script type="text/javascript" charset="UTF-8">
-        var imgName = document.getElementById('img_name_id').value;
-        var imgDesc = document.getElementById('img_desc_id').value;
-        var imgUrl = document.getElementById('img_url_id').value;
+        var imgName = document.getElementById('img_name_id');
+        var imgDesc = document.getElementById('img_desc_id');
+        var imgUrl = document.getElementById('img_url_id');
         
         var dictObject = {};
-        dictObject['imgName'] = imgName;
-        dictObject['imgDesc'] = imgDesc;
-        dictObject['imgUrl'] = imgUrl;
+        dictObject['imgName'] = imgName.nodeValue;
+        dictObject['imgDesc'] = imgDesc.nodeValue;
+        dictObject['imgUrl'] = imgUrl.nodeValue;
         
         document.getElementById('call_save_id').onclick = function callSaveImage(dictObject) {
             window.webkit.messageHandlers.saveImageHandler.postMessage(dictObject);
