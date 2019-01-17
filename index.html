@@ -27,14 +27,14 @@ hello, world!!!<br><br>
         var imgUrl = document.getElementById('img_url_id');
         
         var dictObject = {};
-        dictObject['imgName'] = imgName.nodeValue;
-        dictObject['imgDesc'] = imgDesc.nodeValue;
-        dictObject['imgUrl'] = imgUrl.nodeValue;
+        dictObject['imgName'] = imgName;
+        dictObject['imgDesc'] = imgDesc;
+        dictObject['imgUrl'] = imgUrl;
         
         document.getElementById('call_save_id').onclick = function callSaveImage(dictObject) {
             window.webkit.messageHandlers.saveImageHandler.postMessage(dictObject);
             window.location = 'callSaveImage:dictObject:' + dictObject;
-            alert("name");
+            alert(dictObject.imgName.value);
         });
         
         function redHeader() {
