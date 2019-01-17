@@ -31,7 +31,7 @@ hello, world!!!<br><br>
         dictObject['desc'] = desc;
         dictObject['url'] = url;
         
-        document.getElementById('call_save_id').onclick = function (dictObject) {
+        document.getElementById('call_save_id').onclick = function callSaveImage(dictObject) {
             window.webkit.messageHandlers.saveImageHandler.postMessage(dictObject);
             alert("name");
         });
