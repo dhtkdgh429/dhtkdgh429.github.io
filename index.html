@@ -31,7 +31,7 @@ hello, world!!!<br><br>
         dictObject['imgDesc'] = imgDesc;
         dictObject['imgUrl'] = imgUrl;
         
-        var msgResult = dictObject['imgName'].value + "::" + dictObject['imgDesc'].value + "::" + dictObject['imgUrl'].value;
+        var msgResult = dictObject['imgName'] + "::" + dictObject['imgDesc'] + "::" + dictObject['imgUrl'];
         
         function callSaveImage() {
 //            window.webkit.messageHandlers.saveImageHandler.postMessage(msgResult, "giosis://callSaveImage");
