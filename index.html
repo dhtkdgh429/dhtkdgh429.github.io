@@ -14,24 +14,24 @@ hello, world!!!<br><br>
 
 <body>
     <form>
-        이름 : <input id="img_name" type="text" name="img_name" size="40"><br><br>
-        설명 : <input id="img_desc" type="text" name="img_desc" size="40"><br><br>
-        이미지 URL : <input id="img_url" type="text" name="img_url" size="40"><br><br>
+        이름 : <input id="img_name_id" type="text" name="img_name" size="40"><br><br>
+        설명 : <input id="img_desc_id" type="text" name="img_desc" size="40"><br><br>
+        이미지 URL : <input id="img_url_id" type="text" name="img_url" size="40"><br><br>
         
         <button onclick="callSaveImage()" id="call_save_id" type="button" style="height: 15pt; width: 40pt"> 저장 </button>
         <button id="call_list_id" type="button" style="height: 15pt; width: 40pt"> 목록 </button>
     </form>
     <script type="text/javascript" charset="UTF-8">
-        var imgName = $('#img_name').val();
-        var imgDesc = $('#img_desc').val();
-        var imgUrl = $('#img_url').val();
+        var imgName = $('#img_name_id').val();
+        var imgDesc = $('#img_desc_id').val();
+        var imgUrl = $('#img_url_id').val();
         
         var dictObject = {};
         dictObject['imgName'] = imgName;
         dictObject['imgDesc'] = imgDesc;
         dictObject['imgUrl'] = imgUrl;
 
-        var test = dictObject['imgName'] + "::" + dictObject['imgDesc'].value + "::" + dictObject['imgUrl'].value;
+        var test = dictObject['imgName'] + "::" + dictObject['imgDesc'] + "::" + dictObject['imgUrl'];
         
         function callSaveImage() {
 //            window.webkit.messageHandlers.saveImageHandler.postMessage(dictObject['imgName'].value + "::" + dictObject['imgDesc'].value + "::" + dictObject['imgUrl'].value, "giosis://callSaveImage");
