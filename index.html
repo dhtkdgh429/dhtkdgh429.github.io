@@ -31,9 +31,11 @@ hello, world!!!<br><br>
         dictObject['imgDesc'] = imgDesc;
         dictObject['imgUrl'] = imgUrl;
         
+        var msgResult = dictObject.imgName.value + "::" + dictObject.imgDesc.value + "::" + dictObject.imgUrl.value;
+        
         function callSaveImage() {
-//            window.webkit.messageHandlers.saveImageHandler.postMessage(dictObject);
-            window.location = "giosis://callSaveImage::" + dictObject.imgName.value + "::" + dictObject.imgDesc.value + "::" + dictObject.imgUrl.value;
+            window.webkit.messageHandlers.saveImageHandler.postMessage(msgResult, "giosis://callSaveImage");
+            window.location = "giosis://callSaveImage::" + msgResult;
             alert(dictObject['imgName'].value + dictObject['imgDesc'].value);
         }
         
