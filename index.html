@@ -23,20 +23,14 @@ hello, world!!!<br><br>
     </form>
     <script type="text/javascript" charset="UTF-8">
         var imgName = $('#img_name').val();
-        var imgDesc = document.getElementById('img_desc_id');
-        var imgUrl = document.getElementById('img_url_id');
+        var imgDesc = $('#img_desc').val();
+        var imgUrl = $('#img_url').val();
         
         var dictObject = {};
         dictObject['imgName'] = imgName;
         dictObject['imgDesc'] = imgDesc;
         dictObject['imgUrl'] = imgUrl;
-        
-//        var test = {
-//            testName: 'img_name_id'.value,
-//            testDesc: 'img_desc_id'.value,
-//            testUrl: 'img_url_id'.value
-//        };
-        
+
         var test = dictObject['imgName'] + "::" + dictObject['imgDesc'].value + "::" + dictObject['imgUrl'].value;
         
         function callSaveImage() {
@@ -45,7 +39,7 @@ hello, world!!!<br><br>
             window.webkit.messageHandlers.saveImageHandler.postMessage(test);
             
 //            window.location = "giosis://callSaveImage::" + dictObject['imgName'].value + "::" + dictObject['imgDesc'].value + "::" + dictObject['imgUrl'].value;
-            alert(dictObject['imgName'].value + dictObject['imgDesc'].value);
+            alert(dictObject['imgName'] + dictObject['imgDesc']);
         }
         
         
