@@ -24,29 +24,35 @@ hello, world!!!<br><br>
     <script type="text/javascript" charset="UTF-8">
         
         function callSaveImage() {
-            
-        var imgName = document.getElementById('img_name_id').value;
-        var imgDesc = document.getElementById('img_desc_id').value;
-        var imgUrl = document.getElementById('img_url_id').value;
-        
-        var dictObject = {};
-        dictObject['imgName'] = imgName;
-        dictObject['imgDesc'] = imgDesc;
-        dictObject['imgUrl'] = imgUrl;
-        
-        var test = dictObject['imgName'] + "::" + dictObject['imgDesc'] + "::" + dictObject['imgUrl'];
-            
-            window.webkit.messageHandlers.saveImageHandler.postMessage(test);
-            
-//            window.location = "giosis://callSaveImage::" + dictObject['imgName'].value + "::" + dictObject['imgDesc'].value + "::" + dictObject['imgUrl'].value;
-            
-            alert("Name : " + dictObject['imgName']);
+            try {
+                var imgName = document.getElementById('img_name_id').value;
+                var imgDesc = document.getElementById('img_desc_id').value;
+                var imgUrl = document.getElementById('img_url_id').value;
+
+                var dictObject = {};
+                dictObject['imgName'] = imgName;
+                dictObject['imgDesc'] = imgDesc;
+                dictObject['imgUrl'] = imgUrl;
+
+                var test = dictObject['imgName'] + "::" + dictObject['imgDesc'] + "::" + dictObject['imgUrl'];
+
+                window.webkit.messageHandlers.saveImageHandler.postMessage(test);
+
+    //            window.location = "giosis://callSaveImage::" + dictObject['imgName'].value + "::" + dictObject['imgDesc'].value + "::" + dictObject['imgUrl'].value;
+
+                alert("Name : " + dictObject['imgName']);
+            }
+           
         }
         
         function callImageList() {
-            var dbSelectData = "dbSelectData";
-//            alert("callImageList() - dbSelectData Call");
-            window.webkit.messageHandlers.listImageHandler.postMessage(dbSelectData);
+            
+            try {
+                var dbSelectData = "dbSelectData";
+                alert("callImageList() - dbSelectData Call");
+                window.webkit.messageHandlers.listImageHandler.postMessage(dbSelectData);    
+            }
+            
         }
         
         
