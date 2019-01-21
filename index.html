@@ -44,9 +44,9 @@ hello, world!!!<br><br>
         }
         
         function callImageList() {
-            var funcName = "dbSelectData";
-            alert("callImageList() - dbSelectData Call");
-            window.webkit.messageHandlers.listImageHandler.postMessage(funcName);
+            var dbSelectData = "dbSelectData";
+//            alert("callImageList() - dbSelectData Call");
+            window.webkit.messageHandlers.listImageHandler.postMessage(dbSelectData);
         }
         
         
