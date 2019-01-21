@@ -19,7 +19,7 @@ hello, world!!!<br><br>
         URL : <input id="img_url_id" type="text" name="img_url" size="30"><br>
         
         <button onclick="callSaveImage()" id="call_save_id" type="button" style="height: 15pt; width: 40pt"> 저장 </button>
-        <button id="call_list_id" type="button" style="height: 15pt; width: 40pt"> 목록 </button>
+        <button onclick="callImageList()" id="call_list_id" type="button" style="height: 15pt; width: 40pt"> 목록 </button>
     </form>
     <script type="text/javascript" charset="UTF-8">
         
@@ -44,9 +44,8 @@ hello, world!!!<br><br>
         }
         
         
-        function redHeader() {
-            alert('readHeader() CALL');
-            document.querySelector('h1').style.color = "red";
+        function callImageList() {
+            alert("callImageList() CALL");
         }
     </script>
 </body>
