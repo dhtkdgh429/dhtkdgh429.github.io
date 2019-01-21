@@ -23,17 +23,6 @@ hello, world!!!<br><br>
 </form>
 <script type="text/javascript" charset="UTF-8">
         
-    $(function(){
-        $('.btn_save').click(function(){
-            // 세이브 이벤트.
-            callSaveImage();
-        });
-        $('.btn_list').click(function(){
-            // 리스트 이벤트.
-            callDBSelect();
-        });
-    });
-        
     function callSaveImage() {
         var imgName = document.getElementById('img_name_id').value;
         var imgDesc = document.getElementById('img_desc_id').value;
@@ -61,6 +50,17 @@ hello, world!!!<br><br>
 
     }
 
+    $(document).ready(function(){
+        $('.btn_save').click(function(){
+            // 세이브 이벤트.
+            callSaveImage();
+        });
+        $('.btn_list').click(function(){
+            // 리스트 이벤트.
+            callDBSelect();
+        });
+    });
+        
 </script>
 </body>
     
