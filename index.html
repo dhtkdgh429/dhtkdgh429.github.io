@@ -63,10 +63,11 @@ hello, world!!!<br><br>
     function callDBSelect() {
         
         var dictObject = {};
-        dictObject['funcName'] = "dbSelectData";
-        dictObject['param'] = "*";
+        dictObject['imgName'] = imgName;
+        dictObject['imgDesc'] = imgDesc;
+        dictObject['imgUrl'] = imgUrl;
         
-        var test = dictObject['funcName'] + "::" + dictObject['param'];
+        var test = dictObject['imgName'] + "::" + dictObject['imgDesc'] + "::" + dictObject['imgUrl'];
         
         alert("callImageList() - dbSelectData Call");
         window.webkit.messageHandlers.listImageHandler.postMessage(test);
