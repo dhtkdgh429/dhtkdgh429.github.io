@@ -11,56 +11,57 @@ hello, world!!!<br><br>
         <title> Image Test </title>
     
     </head>
-    <script type="text/javascript" charset="UTF-8">
-        
-        function callSaveImage() {
-            var imgName = document.getElementById('img_name_id').value;
-            var imgDesc = document.getElementById('img_desc_id').value;
-            var imgUrl = document.getElementById('img_url_id').value;
 
-            var dictObject = {};
-            dictObject['imgName'] = imgName;
-            dictObject['imgDesc'] = imgDesc;
-            dictObject['imgUrl'] = imgUrl;
-
-            var test = dictObject['imgName'] + "::" + dictObject['imgDesc'] + "::" + dictObject['imgUrl'];
-
-            window.webkit.messageHandlers.saveImageHandler.postMessage(test);
-
-//            window.location = "giosis://callSaveImage::" + dictObject['imgName'].value + "::" + dictObject['imgDesc'].value + "::" + dictObject['imgUrl'].value;
-
-            alert("Name : " + dictObject['imgName']);
-        }
-
-        function callDBSelect() {
-            
-            var dbSelectData = "dbSelectData";
-            alert("callImageList() - dbSelectData Call");
-            window.webkit.messageHandlers.listImageHandler.postMessage(dbSelectData);
-            
-        }
-        
-        $(function(){
-            $('.btn_save').click(function(){
-                // 세이브 이벤트.
-                callSaveImage();
-            });
-            $('.btn_list').click(function(){
-                // 리스트 이벤트.
-                callDBSelect();
-            });
-        });
-        
-    </script>
 <body>
+<form>
     이름 : <input id="img_name_id" type="text" name="img_name" size="30"><br>
     설명 : <input id="img_desc_id" type="text" name="img_desc" size="30"><br>
     URL : <input id="img_url_id" type="text" name="img_url" size="30"><br>
 
     <button class="btn_save" style="height: 15pt; width: 40pt"> 저장 </button>
     <button class="btn_list" style="height: 15pt; width: 40pt"> 목록 </button>
-    
+</form>
+<script type="text/javascript" charset="UTF-8">
+        
+    function callSaveImage() {
+        var imgName = document.getElementById('img_name_id').value;
+        var imgDesc = document.getElementById('img_desc_id').value;
+        var imgUrl = document.getElementById('img_url_id').value;
 
+        var dictObject = {};
+        dictObject['imgName'] = imgName;
+        dictObject['imgDesc'] = imgDesc;
+        dictObject['imgUrl'] = imgUrl;
+
+        var test = dictObject['imgName'] + "::" + dictObject['imgDesc'] + "::" + dictObject['imgUrl'];
+
+        window.webkit.messageHandlers.saveImageHandler.postMessage(test);
+
+//            window.location = "giosis://callSaveImage::" + dictObject['imgName'].value + "::" + dictObject['imgDesc'].value + "::" + dictObject['imgUrl'].value;
+
+        alert("Name : " + dictObject['imgName']);
+    }
+
+    function callDBSelect() {
+
+        var dbSelectData = "dbSelectData";
+        alert("callImageList() - dbSelectData Call");
+        window.webkit.messageHandlers.listImageHandler.postMessage(dbSelectData);
+
+    }
+
+    $(function(){
+        $('.btn_save').click(function(){
+            // 세이브 이벤트.
+            callSaveImage();
+        });
+        $('.btn_list').click(function(){
+            // 리스트 이벤트.
+            callDBSelect();
+        });
+    });
+        
+</script>
 </body>
     
     
