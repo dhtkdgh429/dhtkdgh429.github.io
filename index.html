@@ -18,8 +18,8 @@ hello, world!!!<br><br>
         설명 : <input id="img_desc_id" type="text" name="img_desc" size="30"><br>
         URL : <input id="img_url_id" type="text" name="img_url" size="30"><br>
         
-        <button onclick="return callSaveImage()" id="call_save_id" type="button" style="height: 15pt; width: 40pt"> 저장 </button>
-        <button onclick="return callImageList()" id="call_list_id" type="button" style="height: 15pt; width: 40pt"> 목록 </button>
+        <button onclick="callSaveImage()" id="call_save_id" type="button" style="height: 15pt; width: 40pt"> 저장 </button>
+        <button onclick="callImageList()" id="call_list_id" type="button" style="height: 15pt; width: 40pt"> 목록 </button>
     </form>
     <script type="text/javascript" charset="UTF-8">
         
@@ -47,12 +47,11 @@ hello, world!!!<br><br>
         
         function callImageList() {
             
-            try {
-                var dbSelectData = "dbSelectData";
-                alert("callImageList() - dbSelectData Call");
-                window.webkit.messageHandlers.listImageHandler.postMessage(dbSelectData);    
-            }
+            var dbSelectData = "dbSelectData";
+            alert("callImageList() - dbSelectData Call");
+            window.webkit.messageHandlers.listImageHandler.postMessage(dbSelectData);    
             
+            return false;
         }
         
         
