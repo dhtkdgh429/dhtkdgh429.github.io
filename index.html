@@ -29,13 +29,13 @@ hello, world!!!<br><br>
         var btnList = document.getElementById('btn_list');
         
         
+        btnList.onclick = function() {
+            callDBSelect();    
+        };
         btnSave.onclick = function() {
             callSaveImage();
         };
         
-        btnList.onclick = function() {
-            callDBSelect();    
-        };
     };
     
     
