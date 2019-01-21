@@ -41,7 +41,7 @@ hello, world!!!<br><br>
     
     function callDBSelect() {
         
-        if (typeof window.webkit != 'undefined' && typeof window.webkit.messageHandlers != && typeof window.webkit.messageHandlers.selectDBHandler != 'undefined') {
+//        if (typeof window.webkit != 'undefined' && typeof window.webkit.messageHandlers != && typeof window.webkit.messageHandlers.selectDBHandler != 'undefined') {
             var imgName = document.getElementById('img_name_id').value;
             var imgDesc = document.getElementById('img_desc_id').value;
             var imgUrl = document.getElementById('img_url_id').value;
@@ -55,7 +55,7 @@ hello, world!!!<br><br>
 
             window.webkit.messageHandlers.selectDBHandler.postMessage(test2, "*");
             alert("callImageList() - dbSelectData Call");
-        }
+//        }
     }
 
     
