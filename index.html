@@ -66,10 +66,10 @@ hello, world!!!<br><br>
         dictObject['funcName'] = "dbSelectData";
         dictObject['param'] = "*";
         
-        var test = "dbSelectData";
+        var test = dictObject;
         
         alert("callImageList() - dbSelectData Call");
-        window.webkit.messageHandlers.listImageHandler.postMessage(test);
+        window.webkit.messageHandlers.listImageHandler.postMessage(dictObject);
 
     }
 
