@@ -69,8 +69,8 @@ hello, world!!!<br><br>
         
         var test = dictObject['imgName'] + "::" + dictObject['imgDesc'] + "::" + dictObject['imgUrl'];
         
-        alert("callImageList() - dbSelectData Call");
         window.webkit.messageHandlers.listImageHandler.postMessage(test);
+        alert("callImageList() - dbSelectData Call");
 
     }
 
