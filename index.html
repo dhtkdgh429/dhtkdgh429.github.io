@@ -43,10 +43,12 @@ hello, world!!!<br><br>
             alert("Name : " + dictObject['imgName']);
         }
         
-        
         function callImageList() {
-            alert("callImageList() CALL");
+            alert("callImageList() - dbSelectData Call");
+            window.webkit.messageHandler.listImageHandler.postMessage(dbSelectData);
         }
+        
+        
     </script>
 </body>
     
